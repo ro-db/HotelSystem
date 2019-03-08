@@ -8,11 +8,8 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
   username: <%= ENV['ROHOTELS_DATABASE_USERNAME'] %>
   password: <%= ENV['ROHOTELS_DATABASE_PASSWORD'] %>  
-  host: 'localhost'
-  #host: ec2-54-83-44-4.compute-1.amazonaws.com
   
 development:
   <<: *default
